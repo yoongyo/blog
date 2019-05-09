@@ -1,0 +1,9 @@
+{% for i in post_list %}
+<ul>
+    <li><a href="{% url 'blog:post_detail' i.pk %}">{{ i.title }}</a></li>
+</ul>
+{% endfor %}
+
+
+<hr>
+<button type="button"><a href="{% url 'blog:post_new' %}">글쓰기</a></button>
